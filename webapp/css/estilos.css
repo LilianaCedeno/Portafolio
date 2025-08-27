@@ -1,0 +1,127 @@
+/* Fuente y fondo */
+body {
+  font-family: 'Udara Malan', sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Banner */
+/* Parte superior del banner con imagen */
+.banner-imagen {
+  background: url("../images/banner.jpg") no-repeat center center;
+  background-size: cover;
+  height: 300px; /* altura gruesa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.banner-imagen h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.banner-imagen p {
+  font-size: 1.2rem;
+}
+
+
+.navbar-nav.flex-row {
+  justify-content: center;
+}
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: white !important;
+}
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Botones */
+button {
+  background-color: #1f3b4d; /* Azul metalizado oscuro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px auto;
+  display: block;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2e5068;
+}
+
+/* Footer */
+.footer {
+  background-color: #1f3b4d; /* Azul metalizado oscuro */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-top: 6px solid white;
+}
+
+.footer-contenido {
+  margin-bottom: 10px;
+}
+
+.icono {
+  width: 30px;    /* ancho deseado */
+  height: 30px;   /* altura deseada */
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.btn-inicio {
+  display: inline-block;
+  background-color: white;
+  color: #1f3b4d;
+  padding: 8px 16px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.btn-inicio:hover {
+  background-color: #2e5068;
+  color: white;
+}
+
+/* Sección Acerca de mí y Contacto */
+main.acerca, main.contacto {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+main.acerca h2, main.contacto h2 {
+  text-align: center;
+  color: #1f3b4d;
+  margin-bottom: 20px;
+}
+
+/* Formularios */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
