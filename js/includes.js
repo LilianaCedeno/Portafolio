@@ -1,5 +1,5 @@
 // Cargar banner
-fetch('banner.html')
+fetch('includes/banner.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('banner').innerHTML = data;
@@ -7,7 +7,7 @@ fetch('banner.html')
   .catch(err => console.error('Error cargando banner:', err));
 
 // Cargar footer
-fetch('footer.html')
+fetch('includes/footer.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('footer').innerHTML = data;

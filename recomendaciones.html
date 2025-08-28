@@ -19,11 +19,24 @@
 
   <!-- Contenido principal -->
   <main class="acerca">
-    <h2>Acerca de mí</h2>
-    <p>Contenido de Acerca de mí aquí...</p>
+    <div class="container">
 
-    <p>            cambia 1.</p>
-    
+    <!-- Formulario -->
+    <form id="recomendacionForm">
+      <label for="recomendacion">Escribe tu Experiencia con Nosotros:</label>
+      <input type="text" id="empresa" placeholder="Nombre de la empresa" required>
+      <textarea id="recomendacion" placeholder="Recomendación" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p>_________________________________________________________________________________________________</p>
+    <!-- Aquí se mostrarán las recomendaciones -->
+    <div id="listaRecomendaciones">
+      <h2>Recomendaciones Recibidas:</h2>
+      <ul id="recomendaciones"></ul>
+    </div>
+  </div>
+
+  
   </main>
 
   <!-- Footer -->
@@ -31,6 +44,7 @@
 
   <!-- Enlace al script externo -->
   
+  <script src="js/recomendaciones.js"></script>
   <script src="js/includes.js"></script>
 </body>
 </html>

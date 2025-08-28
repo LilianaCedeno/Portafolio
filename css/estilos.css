@@ -8,36 +8,46 @@ body {
 }
 
 /* Banner */
-/* Parte superior del banner con imagen */
 .banner-imagen {
   background: url("../images/banner.jpg") no-repeat center center;
   background-size: cover;
-  height: 300px; /* altura gruesa */
+  height: 150px; /* altura gruesa */
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
+  position: relative;
 }
 
-.banner-imagen h1 {
+/* Texto dentro del banner */
+.banner-texto h1 {
   font-size: 3rem;
   font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* para que se vea sobre la imagen */
 }
 
-.banner-imagen p {
+.banner-texto p {
   font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); 
 }
 
 
-.navbar-nav.flex-row {
+.navbar-custom {
+  background-color: #1f3b4d; /* azul metalizado oscuro */
+  display: flex; 
   justify-content: center;
+  padding: 2px 0; 
 }
-.navbar-nav .nav-link {
+
+.navbar-custom .nav-link {
+  color: white;
   font-weight: bold;
-  color: white !important;
+  text-decoration: none;
+  margin: 0 15px;
 }
-.navbar-nav .nav-link:hover {
+
+.navbar-custom .nav-link:hover {
   text-decoration: underline;
 }
 
@@ -56,42 +66,50 @@ button:hover {
   background-color: #2e5068;
 }
 
-/* Footer */
 .footer {
-  background-color: #1f3b4d; /* Azul metalizado oscuro */
+  background-color: #1f3b4d; /* azul metalizado oscuro */
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 5px;
   border-top: 6px solid white;
 }
 
 .footer-contenido {
+  display: flex;
+  justify-content: center; /* centra las columnas horizontalmente */
+  gap: 80px; /* espacio entre columnas */
+  flex-wrap: wrap; /* para que en móviles se ajusten */
   margin-bottom: 10px;
 }
 
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 10px; 
+}
+
 .icono {
-  width: 30px;    /* ancho deseado */
-  height: 30px;   /* altura deseada */
-  margin: 0 10px;
-  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
 }
 
 .btn-inicio {
   display: inline-block;
-  background-color: white;
-  color: #1f3b4d;
+  background-color: rgb(31, 29, 73);
+  color: #c4cfd5;
   padding: 8px 16px;
-  margin-top: 10px;
-  text-decoration: none;
+  margin-top: 5px;
+  text-decoration: white;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .btn-inicio:hover {
   background-color: #2e5068;
   color: white;
 }
-
 /* Sección Acerca de mí y Contacto */
 main.acerca, main.contacto {
   max-width: 800px;
@@ -104,24 +122,105 @@ main.acerca, main.contacto {
 main.acerca h2, main.contacto h2 {
   text-align: center;
   color: #1f3b4d;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
-
-/* Formularios */
-form {
+/* Formulario de contacto */
+.form-container {
+  background-color: #1f3b4d; /* azul metalizado oscuro */
+  padding: 10px 10px; 
+  border-radius: 10px;
   max-width: 400px;
-  margin: 0 auto;
-  text-align: left;
+  margin: 20px auto;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
 }
 
-label {
+form label {
   display: block;
-  margin: 10px 0 5px;
+  margin-bottom: 3px; /* espacio más reducido */
+  font-weight: bold;
 }
 
-input, textarea {
+form input,
+form textarea {
   width: 100%;
-  padding: 8px;
+  padding: 6px;
+  margin-bottom: 8px; /* filas más juntas */
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: white;
+  color: #1f3b4d;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #2e5068;
+  color: rgb(80, 80, 99);
+}
+
+.acerca {
+  background: linear-gradient(135deg, white, white); /* azul metalizado */
+  color: #1f3b4d;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 900px;
+
+}
+
+.acerca h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4fc3f7; /* celeste brillante */
+}
+
+.acerca p {
+  font-size: 1.1rem;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  line-height: 1.6;
+}
+
+.acerca ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.acerca ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+/* Estilos para el área de texto en recomendaciones */
+.recomendaciones {
+  margin: 20px 0;
+}
+
+.recomendaciones h2 {
+  margin-bottom: 10px;
+}
+
+.recomendacion-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.recomendacion-box textarea {
+  width: 300px;
+  height: 100px;
+  padding: 8px;
+  border: 2px solid #007BFF; /* borde azul */
+  border-radius: 6px;
+  resize: none;
 }
