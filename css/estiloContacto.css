@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #1f3b4d; /* Azul metalizado oscuro */
+    --gradient: linear-gradient(135deg, #1f3b4d, #2e5068);
+    --text-primary: #1f3b4d;
+    --text-light: #555;
+    --shadow: 0 4px 10px rgba(24, 28, 97, 0.05); /* sombra muy suave */
+}
+
+/* Fondo general del contacto */
+body, main.contacto {
+    background-color: #ffffff; /* Fondo blanco limpio */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Contenedor principal de contacto: dos columnas */
+.contact-container {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    flex-wrap: wrap; /* responsive para pantallas pequeñas */
+    justify-content: center;
+    margin-top: 3rem;
+    max-width: 1000px; /* ancho máximo del contenedor */
+    margin: 2rem auto; /* centrado horizontal y margen superior e inferior *
+}
+
+/* Columna de info de contacto */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1 1 300px; /* flexible y mínimo ancho */
+}
+
+/* Cada item de contacto */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #ffffff; /* fondo blanco */
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
+
+/* Icono circular */
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Columna del formulario */
+.contact-form {
+    flex: 1 1 400px;
+    background: #ffffff; /* fondo blanco */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(31, 59, 77, 0.1);
+}
+
+/* Botón */
+.contact-form button {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #2e5068;
+}
+
+/* Títulos de sección */
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive: en pantallas pequeñas, columnas apiladas */
+@media screen and (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
